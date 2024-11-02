@@ -19,8 +19,11 @@ foreach ($users_data as $user) {
 }
 
 if ($is_valid) {
-    echo "Login successful! Welcome, " . $username;
+    // إذا كانت بيانات تسجيل الدخول صحيحة، الانتقال إلى صفحة فيسبوك
+    header("Location: https://www.facebook.com");
+    exit();
 } else {
-    echo "Invalid username or password.";
+    // إذا كانت بيانات تسجيل الدخول خاطئة، عرض رسالة توضح ذلك
+    echo "خطأ يا معرض، اليوزر نيم أو كلمة المرور غير صحيحة.";
 }
 ?>
